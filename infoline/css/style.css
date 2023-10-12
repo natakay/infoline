@@ -13,6 +13,10 @@ body {
     font-weight: 400;
 }
 
+img {
+    max-width: 100%;
+}
+
 html,
 body {
     height: 100%;
@@ -52,10 +56,11 @@ h6 {
 }
 
 .wrapper {
-    height: 100%;
+    min-height: 100%;
+    overflow: hidden;
 }
 
-.conteiner {
+.container {
     max-width: 1260px;
     margin: 0 auto;
     padding: 0px 40px;
@@ -167,18 +172,23 @@ h6 {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    position: relative;
+    z-index: 1;
 }
 
-.hero__conteiner {
+.hero__container {
     height: 100%;
     display: flex;
     justify-content: space-between;
 }
 
 .hero__content {
-    width: 602px;
-    padding-top: 92px;
+    /* 602px/1180px = 51% */
+    width: 51%;
+    /* 92px/1180px = 7,8% */
+    padding-top: 7.8%;
     padding-right: 20px;
+    margin-bottom: 16.9%;
 }
 
 .address {
@@ -212,7 +222,8 @@ h6 {
 }
 
 .hero__title {
-    margin-bottom: 48px;
+    /* 48px/602px = 7.7% */
+    margin-bottom: 7.7%;
 }
 
 .hero__btns {}
@@ -237,7 +248,7 @@ h6 {
 .btn_theme_transparent {
     background: transparent;
     border: 1px solid #1E92E7;
-    color: #FFF;
+    color: #000;
 }
 
 .btn_size_big {
@@ -255,7 +266,41 @@ h6 {
 .hero__img-wrap {
     position: relative;
     border-radius: 5px 0px 0px 0px;
-    background-color: bisque;
+    flex-grow: 1;
 }
 
-.hero__img {}
+.hero__img-wrap::before {
+    content: "";
+    display: block;
+    background: url(../img/hero/sky.jpg) center/cover no-repeat;
+    width: 100vw;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    border-radius: inherit;
+}
+
+.hero__img-wrap::after {
+    content: "";
+    display: block;
+    width: 100vw;
+    height: 100%;
+    position: absolute;
+    border-radius: inherit;
+    background-color: #404F59;
+    z-index: -2;
+    top: -15px;
+    left: 30px;
+}
+
+.hero__img {
+    height: 95%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    object-fit: contain;
+    object-position: center bottom;
+}
