@@ -3,15 +3,15 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Бизнес центр в Тюмени></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Бизнес центр в Тюмени</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans:wght@400;600&family=Roboto&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="css/normalize.css"><!--Подключаем для нормального отображения во всех браузерах-->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
@@ -20,11 +20,14 @@
             <div class="container header__container">
                 <div class="menu">
                     <a href="index.html" class="logo">
-                        <img class="logo__img" src="img/icons/logo-icon.svg">
+                        <!-- Логотип -->
+                        <img class="logo__img logo__img_blue" src="img/icons/logo-icon.svg">
+                        <!-- Логотип в полноэкранном меню -->
+                        <img class="logo__img logo__img_white" src="img/icons/logo-icon-white.svg">
                         <span class="logo__title">инфолайн</span>
                     </a>
                     <nav class="nav">
-                        <ul class="nav__list">
+                        <ul class="nav__list header__nav-list">
                             <li class="nav__item">
                                 <a href="#!" class="nav__link">Главная</a>
                             </li>
@@ -39,9 +42,17 @@
                             </li>
                         </ul>
                     </nav>
-                    <div class="phone">
+                    <div class="phone header__phone">
                         <img src="img/icons/tel.svg" class="phone__icon">
-                        <a class="phone__link" href="tel: +73452388000">8 (3452)<span> 388-000</span></a>
+                        <a class="phone__link" href="tel:+73452388000">8 (3452)<span>388-000</span></a>
+                    </div>
+                    <!-- Телефон в полноэкранном меню -->
+                    <a class="header__menu-mobile-phone" href="tel:+7 (3452) 388-000">+7 (3452) 388-000</a>
+                    <!-- Бургер -->
+                    <div class="burger" id="burger">
+                        <span class="burger__el"></span>
+                        <span class="burger__el"></span>
+                        <span class="burger__el"></span>
                     </div>
                 </div>
             </div>
@@ -50,11 +61,11 @@
             <div class="container hero__container">
                 <div class="hero__content">
                     <address class="address">
-                        <img class="addres__icon" src="img/icons/clarity_map-marker-solid.svg">
+                        <img class="address__icon" src="img/icons/clarity_map-marker-solid.svg">
                         <span class="address__text">ул. республики, 61</span>
                     </address>
                     <h1 class="title hero__title">
-                        Бизнес-центр<br>
+                        Бизнес-центр <br>
                         в тюмени
                     </h1>
                     <div class="hero__btns">
@@ -62,11 +73,12 @@
                     </div>
                 </div>
                 <div class="hero__img-wrap">
-                    <img class="hero__img" src="img/hero/vertical-shot-white-building-clear-sky.png">
+                    <img class="hero__img" src="img/hero/vertical-shot-white-building-clear-sky.png" alt="Здание"
+                        width="420" height="550">
                 </div>
             </div>
         </section>
-        <!--Секция Аренда-->
+        <!-- Секция Аренда -->
         <section class="rent">
             <div class="container">
                 <h2 class="section-title rent__title">аренда</h2>
@@ -75,108 +87,124 @@
                         <li class="rent__btns-item">
                             <button class="btn btn_theme_transparent btn_size_small active">Офисы (7)</button>
                         </li>
-                        <li>
+                        <li class="rent__btns-item">
                             <button class="btn btn_theme_transparent btn_size_small">конференс-залы
                                 (2)</button>
                         </li>
-                        <li>
+                        <li class="rent__btns-item">
                             <button class="btn btn_theme_transparent btn_size_small">Торговые (0)</button>
                         </li>
                     </ul>
                 </div>
-                <!--Слайдер Предложений-->
-                <div class="offers-slider">
-                    <div class="container offers-slider__container">
-                        <button
-                            class="control control_prev offers__control offers__control-prev control_type_triangle">назад</button>
-                        <ul class="offers__list">
-                            <li class="offer">
-                                <div class="offer__content">
-                                    <div class="offer__img">
-                                        <img src="img/rent/image-1.jpg" alt="кабинет">
-                                    </div>
-                                    <!--Информация о предложении-->
-                                    <div class="offer__info">
-                                        <ul class="offer__info-list">
-                                            <li class="offer__info-item">
-                                                <span class="offer__info-desc">Площадь</span>
-                                                <span class="offer__info-value">42</span>
-                                            </li>
-                                            <li class="offer__info-item">
-                                                <span class="offer__info-desc">Этаж</span>
-                                                <span class="offer__info-value">7</span>
-                                            </li>
-                                            <li class="offer__info-item">
-                                                <span class="offer__info-desc">Интеренет</span>
-                                                <span class="offer__info-value offer__info-value_true">Есть</span>
-                                            </li>
-                                        </ul>
-                                        <button class="btn btn_theme_blue btn_size_big offer__btn">запросить
-                                            цену</button>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="offer">
-                                <div class="offer__content">
-                                    <div class="offer__img">
-                                        <img src="img/rent/image-1.jpg" alt="кабинет">
-                                    </div>
-                                    <!--Информация о предложении-->
-                                    <div class="offer__info">
-                                        <ul class="offer__info-list">
-                                            <li class="offer__info-item">
-                                                <span class="offer__info-desc">Площадь</span>
-                                                <span class="offer__info-value">42</span>
-                                            </li>
-                                            <li class="offer__info-item">
-                                                <span class="offer__info-desc">Этаж</span>
-                                                <span class="offer__info-value">7</span>
-                                            </li>
-                                            <li class="offer__info-item">
-                                                <span class="offer__info-desc">Интеренет</span>
-                                                <span class="offer__info-value offer__info-value_true">Есть</span>
-                                            </li>
-                                        </ul>
-                                        <button class="btn btn_theme_blue btn_size_big offer__btn">запросить
-                                            цену</button>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="offer">
-                                <div class="offer__content">
-                                    <div class="offer__img">
-                                        <img src="img/rent/image-1.jpg" alt="кабинет">
-                                    </div>
-                                    <!--Информация о предложении-->
-                                    <div class="offer__info">
-                                        <ul class="offer__info-list">
-                                            <li class="offer__info-item">
-                                                <span class="offer__info-desc">Площадь</span>
-                                                <span class="offer__info-value">42</span>
-                                            </li>
-                                            <li class="offer__info-item">
-                                                <span class="offer__info-desc">Этаж</span>
-                                                <span class="offer__info-value">7</span>
-                                            </li>
-                                            <li class="offer__info-item">
-                                                <span class="offer__info-desc">Интеренет</span>
-                                                <span class="offer__info-value offer__info-value_true">Есть</span>
-                                            </li>
-                                        </ul>
-                                        <button class="btn btn_theme_blue btn_size_big offer__btn">запросить
-                                            цену</button>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                        <button
-                            class="control control_next offers__control offers__control-next control_type_triangle">вперед</button>
-                    </div>
+                <div class="rent__select-wrap">
+                    <select class="rent__select" name="plaza" id="plaza">
+                        <option value="" disabled selected>вид площади</option>
+                        <option value="offices">Офисы (7)</option>
+                        <option value="conference">конференс-залы (2)</option>
+                        <option value="comercial">Торговые (0)</option>
+                    </select>
                 </div>
             </div>
-
+            <!-- Слайдер предложений -->
+            <div class="offers-slider">
+                <div class="container offers-slider__container">
+                    <button
+                        class="control control_prev offers__control offers__control-prev control_type_triangle">назад</button>
+                    <ul class="offers__list">
+                        <li class="offer">
+                            <div class="offer__content">
+                                <div class="offer__img">
+                                    <img src="img/rent/image-1.jpg" alt="Кабинет">
+                                </div>
+                                <!-- Информация о предложении -->
+                                <div class="offer__info">
+                                    <ul class="offer__info-list">
+                                        <li class="offer__info-item">
+                                            <span class="offer__info-desc">Площадь</span>
+                                            <span class="offer__info-value">42</span>
+                                        </li>
+                                        <li class="offer__info-item">
+                                            <span class="offer__info-desc">Этаж</span>
+                                            <span class="offer__info-value">7</span>
+                                        </li>
+                                        <li class="offer__info-item">
+                                            <span class="offer__info-desc">Интернет</span>
+                                            <span class="offer__info-value offer__info-value_true">Есть</span>
+                                        </li>
+                                    </ul>
+                                    <button class="btn btn_theme_blue btn_size_big offer__btn">Запросить
+                                        цену</button>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="offer">
+                            <div class="offer__content">
+                                <div class="offer__img">
+                                    <img src="img/rent/image-1.jpg" alt="Кабинет">
+                                </div>
+                                <!-- Информация о предложении -->
+                                <div class="offer__info">
+                                    <ul class="offer__info-list">
+                                        <li class="offer__info-item">
+                                            <span class="offer__info-desc">Площадь</span>
+                                            <span class="offer__info-value">42</span>
+                                        </li>
+                                        <li class="offer__info-item">
+                                            <span class="offer__info-desc">Этаж</span>
+                                            <span class="offer__info-value">7</span>
+                                        </li>
+                                        <li class="offer__info-item">
+                                            <span class="offer__info-desc">Интернет</span>
+                                            <span class="offer__info-value offer__info-value_true">Есть</span>
+                                        </li>
+                                    </ul>
+                                    <button class="btn btn_theme_blue btn_size_big offer__btn">Запросить
+                                        цену</button>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="offer">
+                            <div class="offer__content">
+                                <div class="offer__img">
+                                    <img src="img/rent/image-1.jpg" alt="Кабинет">
+                                </div>
+                                <!-- Информация о предложении -->
+                                <div class="offer__info">
+                                    <ul class="offer__info-list">
+                                        <li class="offer__info-item">
+                                            <span class="offer__info-desc">Площадь</span>
+                                            <span class="offer__info-value">42</span>
+                                        </li>
+                                        <li class="offer__info-item">
+                                            <span class="offer__info-desc">Этаж</span>
+                                            <span class="offer__info-value">7</span>
+                                        </li>
+                                        <li class="offer__info-item">
+                                            <span class="offer__info-desc">Интернет</span>
+                                            <span class="offer__info-value offer__info-value_true">Есть</span>
+                                        </li>
+                                    </ul>
+                                    <button class="btn btn_theme_blue btn_size_big offer__btn">Запросить
+                                        цену</button>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <button
+                        class="control control_next offers__control offers__control-next control_type_triangle">вперед</button>
+                    <ul class="slider-indicators offers-slider-indicators">
+                        <li class="slider-indicator"></li>
+                        <li class="slider-indicator"></li>
+                        <li class="slider-indicator active"></li>
+                        <li class="slider-indicator"></li>
+                        <li class="slider-indicator"></li>
+                        <li class="slider-indicator"></li>
+                    </ul>
+                </div>
+            </div>
         </section>
     </div>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
