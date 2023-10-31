@@ -62,7 +62,25 @@
     .rent__btns-list {
         display: none;
     }
+
+    .contacts {
+        --contacts-left-col: 71.7%;
+        padding: 90px 0px;
+        background: linear-gradient(180deg, #2C3B45 var(--contacts-left-col), #1E92E7 var(--contacts-left-col));
+        position: relative;
+    }
+
+    .contacts::before {
+        width: 100vw;
+        height: var(--contacts-left-col);
+    }
+
+
+    .contacts__container {
+        flex-direction: column;
+    }
 }
+
 
 @media (max-width: 480px) {
     :root {
